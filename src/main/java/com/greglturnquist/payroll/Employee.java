@@ -21,10 +21,6 @@ import javax.persistence.Id;
 
 import lombok.Data;
 
-/**
- * @author Greg Turnquist
- */
-// tag::code[]
 @Data
 @Entity
 public class Employee {
@@ -32,14 +28,11 @@ public class Employee {
 	private @Id @GeneratedValue Long id;
 	private String firstName;
 	private String lastName;
-	private String description;
 
 	private Employee() {}
 
-	public Employee(String firstName, String lastName, String description) {
+	public Employee(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.description = description;
 	}
 }
-// end::code[]
