@@ -7,9 +7,20 @@
 </head>
 <body>
 
-    <div id="react"></div>
+<table>
+    <tr>
+        <td><b>First name</b></td>
+        <td><b>Last name</b></td>
+    </tr>
+    <tr th:each="employee : ${employees}">
+        <td th:text="${employee.firstName}"></td>
+        <td th:text="${employee.lastName}"></td>
+    </tr>
+</table>
 
-    <script src="built/bundle.js"></script>
+<br/>
+
+<span th:text="${version} + ' deployed at ' + ${timestamp}"/>
 
 </body>
 </html>
