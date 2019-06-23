@@ -1,7 +1,11 @@
 [![Build Status](https://travis-ci.org/GreenT13/BasicCICD.svg?branch=master)](https://travis-ci.org/GreenT13/BasicCICD)
 # BasicCICD
-Just for testing the following:
+Todo:
 * Branches fb - acc - prd on github.
 * Deploying separate branches to separate heroku servers.
-* Automatic database migration scripts for each server.
-* PostgreSQL Spring Boot application.
+
+# Database version control (Flyway)
+I use Flyway for all the database-related stuff. Just a list of SQL files, nothing fancy. Spring automatically detects Flyway, so there was no additional configuration. Just add the scripts in the resources/db/migration folder and voila!
+
+# CICD (travis-ci and heroku)
+Project is automatically build using travis-ci, and deployed to heroku.
