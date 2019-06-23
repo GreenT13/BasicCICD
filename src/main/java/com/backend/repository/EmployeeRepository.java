@@ -13,15 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com;
+package com.backend.repository;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.backend.model.Employee;
+import org.springframework.data.repository.CrudRepository;
 
-@SpringBootApplication
-public class ReactAndSpringDataRestApplication {
+/**
+ * @author Greg Turnquist
+ */
+// tag::code[]
+public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ReactAndSpringDataRestApplication.class, args);
-    }
 }
+// end::code[]

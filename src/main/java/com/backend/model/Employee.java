@@ -13,15 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com;
+package com.backend.model;
 
-import org.springframework.data.repository.CrudRepository;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-/**
- * @author Greg Turnquist
- */
-// tag::code[]
-public interface EmployeeRepository extends CrudRepository<Employee, Long> {
+import lombok.Data;
 
+@Data
+@Entity
+public class Employee {
+
+	private @Id @GeneratedValue Long id;
+	private String firstName;
+	private String lastName;
+
+	private Employee() {}
+
+	public Employee(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 }
-// end::code[]
